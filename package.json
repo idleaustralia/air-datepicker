@@ -1,5 +1,5 @@
 {
-  "name": "air-datepicker",
+  "name": "@idleaustralia/air-datepicker",
   "version": "2.2.3",
   "devDependencies": {
     "autoprefixer": "^6.1.0",
