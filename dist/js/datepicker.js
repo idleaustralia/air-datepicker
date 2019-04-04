@@ -801,6 +801,16 @@
                     }
             }
 
+            // Always position datepicker completely inside the viewport
+            const pointerHeight = 5;
+            const scrollTop = $(window).scrollTop();
+            const distanceTop =
+              dims.top + dims.height + offset + pointerHeight - scrollTop;
+            if (distanceTop + selfDims.height > window.innerHeight) {
+              const overflow = distanceTop + selfDims.height - window.innerHeight;
+              top = top - overflow;
+            }
+
             this.$datepicker
                 .css({
                     left: left,
